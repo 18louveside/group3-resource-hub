@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b2545">
+  <meta name="description" content="Group 3 Bioethics Advocacy Campaign: Who Gets the Vaccine First? Explore the sources and think about vaccine equity.">
+  <title>Who Gets the Vaccine First? | Group 3</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg:#f6f2e8; --ink:#102a43; --card:#fff; --accent:#075e59;
+      --line:#b8c7cf; --soft:#e5f1ef; --note:#fff1c8; --focus:#a33b00;
+      --muted:#425466; --shadow:0 2px 10px rgba(11,37,69,.07);
+      font-size: 16px;
+    }
+    :root[data-theme="dark"] {
+      color-scheme:dark; --bg:#0b2545; --ink:#f6f2e8; --card:#12365e;
+      --accent:#79e0d6; --line:#54718b; --soft:#183f60; --note:#3c3b28;
+      --focus:#ffcf70; --muted:#d2deea; --shadow:none;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:1rem; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; line-height:1.65; }
+    a { color:var(--accent); text-decoration-thickness:.09em; text-underline-offset:.18em; overflow-wrap:anywhere; }
+    a:hover { text-decoration-thickness:.16em; }
+    a:focus-visible, button:focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
+    .skip { position:absolute; left:-9999px; top:0; background:var(--card); color:var(--ink); padding:.7rem 1rem; z-index:10; }
+    .skip:focus { left:.5rem; top:.5rem; }
+    header, main, footer { width:min(100% - 2rem, 760px); margin-inline:auto; }
+    header { padding:1.2rem 0 .5rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
+    .brand { font-size:.78rem; font-weight:800; letter-spacing:.08em; }
+    .tools { display:flex; gap:.5rem; flex-wrap:wrap; }
+    button { font:inherit; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:999px; padding:.55rem .85rem; cursor:pointer; }
+    button:hover { border-color:var(--accent); }
+    main { padding:1.2rem 0 3rem; }
+    h1 { font-size:clamp(2rem,7vw,3rem); line-height:1.12; letter-spacing:-.035em; margin:.4rem 0 .8rem; }
+    h2 { font-size:1.35rem; line-height:1.25; margin:2.3rem 0 .75rem; color:var(--accent); }
+    p { margin:.6rem 0 1rem; }
+    .intro { font-size:1.08rem; max-width:65ch; }
+    .status { display:flex; align-items:center; gap:.55rem; padding:.65rem .85rem; border:1px solid var(--line); background:var(--card); border-radius:.75rem; font-size:.9rem; margin:1rem 0; }
+    .dot { width:.65rem; height:.65rem; border-radius:50%; background:#16834a; flex:none; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:.9rem; padding:1rem 1.1rem; margin:.75rem 0; box-shadow:var(--shadow); }
+    .card b { color:var(--accent); }
+    .note { background:var(--note); border:1px solid var(--line); border-radius:.9rem; padding:1rem 1.1rem; }
+    .source-title { font-weight:700; }
+    .source-link { display:inline-block; margin-top:.35rem; }
+    .actions { display:flex; gap:.6rem; flex-wrap:wrap; margin:1rem 0; }
+    .small { font-size:.9rem; color:var(--muted); }
+    footer { border-top:1px solid var(--line); padding:1rem 0 2rem; color:var(--muted); font-size:.88rem; }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media (max-width:420px) { header, main, footer { width:min(100% - 1.25rem,760px); } .tools button { padding:.5rem .7rem; font-size:.9rem; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header>
+    <div class="brand">BIOETHICS ADVOCACY CAMPAIGN · GROUP 3</div>
+    <div class="tools" aria-label="Display options">
+      <button id="themeButton" type="button" aria-pressed="false">Dark mode</button>
+      <button id="textButton" type="button" aria-label="Increase text size">A+ Text</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Who Gets the Vaccine First?</h1>
+    <p class="intro">Thanks for stopping by our Ethics &amp; Awareness Corner. Every fact on our poster is numbered below, with a link to its source, so you can check it yourself.</p>
+
+    <div class="status" role="status" aria-live="polite">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="networkStatus">Checking connection…</span>
+    </div>
+    <p class="small">This page is designed to be lightweight. After the first successful online visit, it can be saved by your browser and opened again offline on supported browsers.</p>
+
+    <div class="actions">
+      <button id="installButton" type="button" hidden>Install / Save this page</button>
+      <button id="shareButton" type="button">Share this page</button>
+    </div>
+
+    <h2>Sources behind the poster</h2>
+    <section class="card" aria-label="Source 1">
+      <b>[1]</b> <span class="source-title">UN News (2021, Sept.).</span> COVID vaccines: Widening inequality and millions vulnerable.
+      <a class="source-link" href="https://news.un.org/en/story/2021/09/1100192" target="_blank" rel="noopener noreferrer">Open source at news.un.org</a>
+    </section>
+    <section class="card" aria-label="Source 2">
+      <b>[2]</b> <span class="source-title">WHO briefing, reported by CNBC (2021, Apr. 9).</span> Poor countries have received just 0.2% of world’s vaccine supply.
+      <a class="source-link" href="https://www.cnbc.com/2021/04/09/who-says-poor-countries-have-received-just-0point2percent-of-worlds-vaccine-supply.html" target="_blank" rel="noopener noreferrer">Open source at cnbc.com</a>
+    </section>
+    <section class="card" aria-label="Source 3">
+      <b>[3]</b> <span class="source-title">Gavi (2022).</span> COVAX calls for urgent action to close vaccine equity gap.
+      <a class="source-link" href="https://www.gavi.org/news/media-room/covax-calls-urgent-action-close-vaccine-equity-gap" target="_blank" rel="noopener noreferrer">Open source at gavi.org</a>
+    </section>
+    <section class="card" aria-label="Source 4">
+      <b>[4]</b> <span class="source-title">WHO (2026, May 19).</span> Seventy-ninth World Health Assembly: Daily update.
+      <a class="source-link" href="https://www.who.int/news/item/19-05-2026-seventy-ninth-world-health-assembly---daily-update--19-may-2026" target="_blank" rel="noopener noreferrer">Open source at who.int</a>
+    </section>
+    <section class="card" aria-label="Source 5">
+      <b>[5]</b> <span class="source-title">WHO (2026, Mar. 28).</span> Member States agree to extend negotiations on key annex to the Pandemic Agreement.
+      <a class="source-link" href="https://www.who.int/news/item/28-03-2026-who-member-states-agree-to-extend-negotiations-on-key-annex-to-the-pandemic-agreement" target="_blank" rel="noopener noreferrer">Open source at who.int</a>
+    </section>
+    <section class="card" aria-label="Source 6">
+      <b>[6]</b> <span class="source-title">IFPMA (2022, Jun. 17).</span> Pharmaceutical industry expresses deep disappointment with decision on waiving IP rights.
+      <a class="source-link" href="https://www.ifpma.org/news/pharmaceutical-industry-expresses-deep-disappointment-with-decision-on-waiving-intellectual-property-rights-adopted-at-the-world-trade-organization-ministerial-conference/" target="_blank" rel="noopener noreferrer">Open source at ifpma.org</a>
+    </section>
+    <section class="card" aria-label="Source 7">
+      <b>[7]</b> <span class="source-title">Biopharma Reporter (2022, Jun. 20).</span> Pharma industry slams WTO move on TRIPS waiver.
+      <a class="source-link" href="https://biopharma-reporter.com/Article/2022/06/20/Pharma-industry-slams-WTO-move-on-TRIPS-waiver" target="_blank" rel="noopener noreferrer">Open source at biopharma-reporter.com</a>
+    </section>
+    <section class="card" aria-label="Source 8">
+      <b>[8]</b> <span class="source-title">Medicines Law &amp; Policy (2022, Jun.).</span> WTO Covid-19 TRIPS decision.
+      <a class="source-link" href="https://medicineslawandpolicy.org/2022/06/wto-covid-19-trips-decision-a-diplomatic-compromise-that-will-not-deliver" target="_blank" rel="noopener noreferrer">Open source at medicineslawandpolicy.org</a>
+    </section>
+
+    <h2>Keep thinking</h2>
+    <p class="note">Industry groups and equity advocates read the same events very differently, so read both sources [6][7] and [1][8] before deciding. Would your answer change if you lived in a country still waiting?</p>
+
+    <h2>Take part</h2>
+    <div class="card">Share one verified fact from this page with someone this week, and ask them where they stand on patents versus access.</div>
+    <p class="small">Figures are from the dates shown. The Pandemic Agreement’s negotiation status can change, so check WHO for updates when you have internet access.</p>
+  </main>
+
+  <footer>
+    <p>Group 3 · Bioethics Advocacy Campaign</p>
+    <p>Offline note: the page itself can work offline after it has been cached. External source websites still need an internet connection.</p>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const themeButton = document.getElementById('themeButton');
+    const textButton = document.getElementById('textButton');
+    const statusText = document.getElementById('networkStatus');
+    const installButton = document.getElementById('installButton');
+    let largerText = false;
+    let installPrompt = null;
+
+    function updateNetwork() {
+      statusText.textContent = navigator.onLine
+        ? 'You are online. This page can save itself for offline use.'
+        : 'You are offline. If this page was saved before, its content is still available.';
+    }
+    window.addEventListener('online', updateNetwork);
+    window.addEventListener('offline', updateNetwork);
+    updateNetwork();
+
+    themeButton.addEventListener('click', () => {
+      const dark = root.dataset.theme !== 'dark';
+      root.dataset.theme = dark ? 'dark' : 'light';
+      themeButton.textContent = dark ? 'Light mode' : 'Dark mode';
+      themeButton.setAttribute('aria-pressed', String(dark));
+    });
+    textButton.addEventListener('click', () => {
+      largerText = !largerText;
+      root.style.fontSize = largerText ? '18px' : '16px';
+      textButton.textContent = largerText ? 'A− Text' : 'A+ Text';
+      textButton.setAttribute('aria-label', largerText ? 'Restore normal text size' : 'Increase text size');
+    });
+    document.getElementById('shareButton').addEventListener('click', async () => {
+      const shareData = { title: document.title, text: 'Group 3: Who Gets the Vaccine First?', url: location.href };
+      try {
+        if (navigator.share) await navigator.share(shareData);
+        else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(location.href);
+          alert('Page link copied. You can now share it.');
+        } else {
+          alert('Copy the page address from your browser and share it.');
+        }
+      } catch (error) { /* Sharing was cancelled or unavailable. */ }
+    });
+    window.addEventListener('beforeinstallprompt', (event) => {
+      event.preventDefault();
+      installPrompt = event;
+      installButton.hidden = false;
+    });
+    installButton.addEventListener('click', async () => {
+      if (!installPrompt) return;
+      installPrompt.prompt();
+      await installPrompt.userChoice;
+      installPrompt = null;
+      installButton.hidden = true;
+    });
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {
+          statusText.textContent = navigator.onLine
+            ? 'Online. Offline saving is not available on this host yet.'
+            : 'Offline. This page may still be available if your browser cached it.';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
